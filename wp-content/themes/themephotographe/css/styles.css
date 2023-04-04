@@ -1,35 +1,124 @@
-.menu {
-  position: fixed;
-  top: 0px;
+/* .menu {
+    position: fixed;
+    top: 0px;
 }
 
 .admin-bar .menu {
-  top: 32px; /* on prend en compte le décalage */
+	top: 32px; /* on prend en compte le décalage 
+}*/
+
+/* FONTS  */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #000;
+/**********/
+/* HEADER */
+/**********/
+
+.navbar-nav a {
+  text-decoration: none;
+  color: black;
+  padding-right: 20px;
 }
-ul a:hover {
-  color: #fbc02d !important;
+
+@media screen and (max-width: 991px) {
+  .navbar-nav a {
+    padding: 0;
+  }
 }
-nav li {
+
+/**********/
+/* FOOTER */
+/**********/
+
+#footer {
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid black;
+}
+
+#footer a,
+#footer p {
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
 }
-li > a:after {
-  content: "";
-  display: block;
-  height: 1.5px;
-  background: #fbc02d;
-  transform: scaleX(0);
-  transition: transform 0.3s;
+
+/*****************/
+/* HERO SECTION  */
+/*****************/
+
+.image-bg {
+  background-image: url("http://localhost/photographe-oc/wp-content/uploads/2023/04/hero-section-scaled.jpeg");
+  background-size: cover; /* Ajuste la taille de l'image pour remplir toute la div */
+  background-position: center; /* Centre l'image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Définit la hauteur de la div */
 }
-li > a:hover:after {
-  transform: scaleX(1);
-  transition: transform 0.3s;
+
+.image-bg h1 {
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 142px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255); /* à modifier */
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+    -1px 1px 0 #fff;
 }
-.active {
-  color: #fbc02d !important;
+
+/* MODAL  */
+
+#contact-button {
+  border: none;
+  background-color: white;
+  padding: 0;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: white;
+  border: none;
+  padding-left: 72px;
+}
+
+.submit-button:hover {
+  padding-left: 36px;
+  transition: 0.5s;
+}
+
+.contact-title {
+  width: 100%;
+}
+
+.modal-header {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  height: 80px;
 }
