@@ -9,7 +9,6 @@
     <h1><?php the_field('titre') ?></h1>
 </section>
 
-
 <section class="container my-6">
     <div class="d-flex justify-content-between">
         <div>
@@ -64,7 +63,6 @@
                 <?php endwhile;
                 endif; ?>
             </div>
-
         </div>
     </div>
 </section>

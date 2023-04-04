@@ -65,3 +65,21 @@ function create_custom_posttype_project() {
 }
 
 add_action('init', 'create_custom_posttype_project');
+
+// Création de la catégorie associée à mon CPT : test 
+
+// function create_taxonomy_test() {
+//     register_taxonomy(
+//         'taxonomy_photos_test',
+//         'photo',
+//         array(
+//             'hierarchical' => true,
+//             'labels' => array(
+//                 'name' => 'Tests',  // nom au pluriel
+//                 'singular' => 'Test'  // nom au singulier
+//                 )
+//             )
+//         );
+// }
+
+// add_action('init', 'create_taxonomy_test');
