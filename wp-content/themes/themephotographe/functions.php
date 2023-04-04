@@ -48,3 +48,20 @@ function register_my_menus()
     );
 }
 add_action('after_setup_theme', 'register_my_menus');
+
+
+// Register Post Type de 'photo' dans le menu gauche de WordPress
+
+function create_custom_posttype_project() {
+    // Fonction WP 
+    register_post_type(
+        'photo',
+        array(
+            'label' => 'Photos',
+            'description' => 'Une photographie',
+            'public' => true // si passé à true = catégories, si false = étiquettes
+        )
+    );
+}
+
+add_action('init', 'create_custom_posttype_project');

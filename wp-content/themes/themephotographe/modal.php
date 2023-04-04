@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <span class="contact-form"><?php echo do_shortcode( '[contact-form-7 id="24" title="Contact form 1"]' ); ?></span>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
             </div>
      
         </div>

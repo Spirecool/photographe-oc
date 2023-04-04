@@ -22,7 +22,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <!-- Logo -->
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" width="160px">
                     </a>
 

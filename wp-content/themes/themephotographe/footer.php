@@ -3,9 +3,9 @@
             <footer id="footer">
                 <div class="container">
                     <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 ">
-                        <a href="http://localhost/photographe-oc/mentions-legales/" class="col-md-4 mb-0 text-body-secondary">Mentions légales</a>
+                        <a href="<?php echo get_permalink(18); ?>" class="col-md-4 mb-0 text-body-secondary">Mentions légales</a>
 
-                        <a href="http://localhost/photographe-oc/politique-de-confidentialite/" class="col-md-4 mb-0 text-body-secondary">Vie privée</a>
+                        <a href="<?php echo get_permalink(16); ?>" class="col-md-4 mb-0 text-body-secondary">Vie privée</a>
                         <p class="col-md-4 mb-0 text-body-secondary">Tous droits réservés</p>
                     </footer>
                 </div>
