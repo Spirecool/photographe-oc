@@ -66,20 +66,46 @@ function create_custom_posttype_project() {
 
 add_action('init', 'create_custom_posttype_project');
 
-// Création de la catégorie associée à mon CPT : test 
 
-// function create_taxonomy_test() {
+// Création de la catégorie associée à mon CPT : catégorie 
+
+
+// function create_taxonomy_categorie() {
+    
+//     // Déclaration de la Taxonomie
+//     $labels = array(
+//         'name' => 'Type de catégorie',
+//         'new_item_name' => 'Nom de la nouvelle catégorie',
+//     );
+    
+//     $args = array( 
+//         'labels' => $labels,
+//         'public' => true, 
+//         'show_in_rest' => true,
+//         'hierarchical' => true, 
+//     );
+
+//     register_taxonomy( 'type-projet', 'photo', $args );
+// }
+
+
+// add_action('init', 'create_taxonomy_categorie');
+
+
+// Création de la catégorie associée à mon CPT : Format 
+
+// function create_taxonomy_format() {
 //     register_taxonomy(
-//         'taxonomy_photos_test',
+//         'taxonomy_photos_format',
 //         'photo',
 //         array(
 //             'hierarchical' => true,
 //             'labels' => array(
-//                 'name' => 'Tests',  // nom au pluriel
-//                 'singular' => 'Test'  // nom au singulier
+//                 'name' => 'Formats',  // nom au pluriel
+//                 'singular' => 'Format'  // nom au singulier
 //                 )
 //             )
 //         );
 // }
 
-// add_action('init', 'create_taxonomy_test');
+// add_action('init', 'create_taxonomy_format');

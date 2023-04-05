@@ -8,8 +8,9 @@
             <div class="col-md-6 col-sm-12 left-single border-bottom border-dark">
                 <h1 class="my-5 single-title w-50"><?php the_title(); ?></h1>
                 <span> Référence : <?php the_field('reference'); ?> <br>
-                    Catégorie : <?php the_field('categories'); ?> <br>
-                    Format : <?php the_field('format'); ?> <br>
+                    Catégorie : <?php the_terms( get_the_ID() , 'catphoto' ); ?> <br>
+                    Format :<?php the_terms( get_the_ID() , 'formatphoto' ); ?>  <br>
+                    Format :<?php the_terms( get_the_ID() , 'couleur' ); ?>  <br>
                     Type : <?php the_field('type'); ?> <br>
                     Année : <?php the_field('annee'); ?>
                 </span>
@@ -22,3 +23,4 @@
 
     <?php get_footer(); ?>
 </div>
+

@@ -16,7 +16,7 @@
 
             <label class="select-wrap entypo-down-open-mini">
                 <select name="category">
-                    <option value="" selected ></option>
+                    <option value="" selected></option>
                     <option value="">Mariage</option>
                     <option value="">Soirée d'entreprise</option>
                     <option value="">Anniversaire</option>
@@ -29,11 +29,11 @@
 
             <label class="select-wrap entypo-down-open-mini">
                 <select name="category">
-                <option value="" selected></option>
-                    <option value="" >Portrait</option>
+                    <option value="" selected></option>
+                    <option value="">Portrait</option>
                     <option value="">Paysage</option>
                     <option value="">1/1</option>
-                    <option value="">A4</option> 
+                    <option value="">A4</option>
                 </select>
             </label>
         </div>
@@ -42,7 +42,7 @@
 
             <label class="select-wrap entypo-down-open-mini">
                 <select name="category">
-                    <option value="" selected ></option>
+                    <option value="" selected></option>
                     <option value="">Nouveautés</option>
                     <option value="">Les plus populaires</option>
                     <option value="">Les plus anciens</option>
@@ -54,17 +54,39 @@
 
 
 <section>
-    <div class="container">
+
+    <!-- <div class="container my-5">
+        <h2> Photos</h2>
+        <?php the_field('texte_photographies'); ?>
         <div class="row">
-            <div class="col-md-8">
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php the_content(); ?></p>
-                <?php endwhile;
-                endif; ?>
-            </div>
+            <?php $text = get_field('photographies') ?>
+            <pre>
+                <?php var_dump($text); ?>
+            </pre>
         </div>
-    </div>
+
+    </div> -->
+</section>
+
+<section>
+    <div class="container py-5">
+
+        <div class="row">
+
+            <?php $photos = get_field('photographies'); ?>
+            <?php for ($i = 0; $i < count($photos); $i++) : ?>
+                <div class='col-md-6'>
+                    <div>
+                        <?php $idPhoto = $photos[$i]; ?>
+                        <img src="<?php echo get_field('image', $idPhoto) ?>" alt="" width="100%">
+                        <h3> <?php echo get_the_title($idPhoto) ?></h3>
+                        <button>df</button>
+                    </div>
+                </div>
+            <?php endfor ?>
+
+        </div>
+
 </section>
 
 <?php get_footer(); ?>
