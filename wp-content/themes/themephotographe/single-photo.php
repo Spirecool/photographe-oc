@@ -22,7 +22,7 @@
     </section>
 
     <section>
-        <div class="container my-5 ">
+        <div class="container my-5 border-bottom border-dark">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="col-md-6 mr-2">
@@ -38,5 +38,19 @@
             </div>
         </div>
     </section>
+
+    <section>
+        <h2 class="my-5 text-uppercase"> Vous aimerez aussi </h2>
+
+        <div>
+            autres images
+        </div>
+
+        <div class="d-flex justify-content-center my-5">
+            <button class="all-button">Toutes les photos</button>
+        </div>
+
+    </section>
+
     <?php get_footer(); ?>
 </div>
