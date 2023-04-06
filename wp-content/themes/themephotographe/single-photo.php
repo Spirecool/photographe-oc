@@ -8,9 +8,9 @@
             <div class="col-md-6 col-sm-12 left-single border-bottom border-dark">
                 <h1 class="my-5 single-title w-50"><?php the_title(); ?></h1>
                 <span> Référence : <?php the_field('reference'); ?> <br>
-                    Catégorie : <?php the_terms( get_the_ID() , 'catphoto' ); ?> <br>
-                    Format :<?php the_terms( get_the_ID() , 'formatphoto' ); ?>  <br>
-                    Format :<?php the_terms( get_the_ID() , 'couleur' ); ?>  <br>
+                    Catégorie : <?php the_terms(get_the_ID(), 'catphoto'); ?> <br>
+                    Format :<?php the_terms(get_the_ID(), 'formatphoto'); ?> <br>
+                    Format :<?php the_terms(get_the_ID(), 'couleur'); ?> <br>
                     Type : <?php the_field('type'); ?> <br>
                     Année : <?php the_field('annee'); ?>
                 </span>
@@ -21,6 +21,22 @@
         </div>
     </section>
 
+    <section>
+        <div class="container my-5 ">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="col-md-6 mr-2">
+                        <p>Cette photo vous intéresse ?</p>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <button class="contact-button">Contact</button>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <p>Deuxième div</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <?php get_footer(); ?>
 </div>
-

@@ -87,6 +87,9 @@
 
         </div>
 
+        <div class="d-flex justify-content-center my-5">
+            <button class="all-button">Toutes les photos</button>
+        </div>
 </section>
 
 <?php get_footer(); ?>
