@@ -6,8 +6,9 @@
 
 
 <section class="image-bg">
-    <h1><?php the_field('titre') ?></h1>
+    <img src="<?php echo get_template_directory_uri(); ?>/images/h1.png" alt="" class="img-fluid">
 </section>
+
 
 <section class="container my-6">
     <div class="d-flex justify-content-between">
@@ -73,16 +74,28 @@
 
         <div class="row">
 
-            <?php $photos = get_field('photographies'); ?>
+            <?php $params = array(
+                'post_type' => 'photo',
+                // -1 permet de récupérer tous les éléments
+                'numberposts' => -1,
+                'orderby' => 'date',
+                'order' => 'ASC',
+            ); ?>
+
+            <?php $photos = get_posts($params); ?>
+
             <?php for ($i = 0; $i < count($photos); $i++) : ?>
+
                 <div class='col-md-6'>
                     <div>
-                        <?php $idPhoto = $photos[$i]; ?>
+                        <?php $idPhoto = $photos[$i]->ID; ?>
                         <img src="<?php echo get_field('image', $idPhoto) ?>" alt="" width="100%">
                         <h3> <?php echo get_the_title($idPhoto) ?></h3>
-                        <button>df</button>
+                        <a href="<?php echo get_permalink($idPhoto) ?>"> <button> Voir </button> </a>
+                        <p> Catégorie : <?php echo the_terms(($idPhoto), 'catphoto'); ?></p>
                     </div>
                 </div>
+
             <?php endfor ?>
 
         </div>
@@ -91,5 +104,9 @@
             <button class="all-button">Toutes les photos</button>
         </div>
 </section>
+
+
+
+
 
 <?php get_footer(); ?>

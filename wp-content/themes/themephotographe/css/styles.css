@@ -7,15 +7,11 @@
 	top: 32px; /* on prend en compte le décalage 
 }*/
 
-
-
 /************/
 /* GENERAL  */
 /************/
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
 
 html,
 body {
@@ -24,16 +20,13 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   font-size: 14px;
 }
-
-
 
 /**********/
 /* HEADER */
 /**********/
-
 
 nav {
   background-color: white;
@@ -42,7 +35,7 @@ nav {
   text-decoration: none;
   color: black;
   padding-right: 20px;
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -60,12 +53,9 @@ nav {
   background-color: white;
 }
 
-
-
 /**********/
 /* FOOTER */
 /**********/
-
 
 #footer {
   /* position: absolute; */
@@ -83,13 +73,9 @@ nav {
   text-transform: uppercase;
 }
 
-
-
 /*****************/
 /* HERO SECTION  */
 /*****************/
-
-
 
 .image-bg {
   background-image: url("http://localhost/photographe-oc/wp-content/uploads/2023/04/hero-section-scaled.jpeg");
@@ -98,9 +84,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 100vh;
 }
-
 
 .image-bg h1 {
   text-align: center;
@@ -129,7 +114,7 @@ nav {
   border: none;
   background-color: white;
   padding: 0;
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -181,11 +166,9 @@ footer {
   width: 335px;
 }
 
-
 /***************/
 /* SINGLE PAGE */
 /***************/
-
 
 .left-single h1 {
   font-weight: 400;
@@ -193,14 +176,14 @@ footer {
   font-size: 66px;
   line-height: 58px;
   text-transform: uppercase;
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
 }
 
 .left-single span {
   text-transform: uppercase;
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   font-style: normal;
-  font-weight: 400 ;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.1em;
@@ -210,9 +193,8 @@ footer {
 /* Buttons  */
 /************/
 
-
-.contact-button, .all-button {
-
+.contact-button,
+.all-button {
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -228,7 +210,8 @@ footer {
   transition: all 0.5s ease-out;
 }
 
-.contact-button:hover, .all-button:hover {
+.contact-button:hover,
+.all-button:hover {
   background-position: left bottom;
   color: white;
 }
@@ -241,4 +224,16 @@ footer {
 .all-button {
   width: 214px;
   height: 38px;
+}
+
+
+
+/********/
+/* CARD */
+/********/
+
+.texte-transparent {
+  color: rgba(0, 0, 0, 0); /* Couleur du texte transparente */
+  border: 2px solid red; /* Bordure rouge de 2 pixels */
+  padding: 10px; /* Espace intérieur de 10 pixels */
 }

@@ -22,7 +22,19 @@
         'order' => 'DESC',
     ); ?>
 
-    <?php $allPhotographies = get_posts($params); ?>
+<?php $allPhotographies = get_posts($params); ?>
+
+<ul>
+    <?php for ($i=0; $i < count($allPhotographies) ; $i++) : ?> 
+
+    <li>
+        <?php $idPhotographie = $allPhotographies[$i]->ID; ?>
+        <a href="<?php echo get_permalink($idPhotographie) ?>"><?php echo get_the_title($idPhotographie) ?></a>
+
+    </li>
+    <?php endfor ?>
+</ul>
+
     <pre>
         <?php var_dump($allPhotographies); ?>
     </pre>
