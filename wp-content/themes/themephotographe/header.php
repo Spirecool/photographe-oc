@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <!-- Sert à déclarer le chargement des scripts et des styles -->
+
     <?php wp_head(); ?>
 </head>
 
@@ -23,7 +24,7 @@
                 <div class="container-fluid">
                     <!-- Logo -->
                     <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" width="160px">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" id="logo"">
                     </a>
 
                     <!-- Bouton pour afficher le menu sur les petits écrans -->

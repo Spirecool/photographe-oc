@@ -89,10 +89,22 @@
                 <div class='col-md-6'>
                     <div>
                         <?php $idPhoto = $photos[$i]->ID; ?>
-                        <img src="<?php echo get_field('image', $idPhoto) ?>" alt="" width="100%">
+                        <!-- <img src="<?php echo get_field('image', $idPhoto) ?>" alt="" width="100%"> -->
+
+                        <div class="container-block">
+                            <div class="image-container-block">
+                                <img src="<?php echo get_field('image', $idPhoto) ?>" alt="" class="image-block">
+                                <div class="overlay-block">
+                                    <p class="bottom-left"><?php echo get_the_title($idPhoto) ?></p>
+                                    <p class="bottom-right"> <?php echo the_terms(($idPhoto), 'catphoto'); ?></p>
+                                    <a href="<?php echo get_permalink($idPhoto) ?>" class="d-flex justify-content-center"> <button> Voir </button> </a>
+                                </div>
+                            </div>
+                        </div>
+<!-- 
                         <h3> <?php echo get_the_title($idPhoto) ?></h3>
-                        <a href="<?php echo get_permalink($idPhoto) ?>"> <button> Voir </button> </a>
-                        <p> Catégorie : <?php echo the_terms(($idPhoto), 'catphoto'); ?></p>
+
+                        <p> Catégorie : <?php echo the_terms(($idPhoto), 'catphoto'); ?></p> -->
                     </div>
                 </div>
 
@@ -103,7 +115,9 @@
         <div class="d-flex justify-content-center my-5">
             <button class="all-button">Toutes les photos</button>
         </div>
+
 </section>
+
 
 
 

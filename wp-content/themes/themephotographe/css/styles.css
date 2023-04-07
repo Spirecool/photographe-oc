@@ -28,6 +28,10 @@ body {
 /* HEADER */
 /**********/
 
+#logo {
+  width: 216px;
+}
+
 nav {
   background-color: white;
 }
@@ -64,6 +68,7 @@ nav {
   right: 0;
   border-top: 1px solid black;
   background-color: white;
+  height: 40px;
 }
 
 #footer a,
@@ -158,9 +163,6 @@ nav {
   padding: 0;
 }
 
-footer {
-  height: 80px;
-}
 
 .labell {
   width: 335px;
@@ -232,8 +234,85 @@ footer {
 /* CARD */
 /********/
 
-.texte-transparent {
-  color: rgba(0, 0, 0, 0); /* Couleur du texte transparente */
-  border: 2px solid red; /* Bordure rouge de 2 pixels */
-  padding: 10px; /* Espace intérieur de 10 pixels */
+
+.container-block {
+  width: 100%; /* Largeur de la div */
+  height: 495px;
+  padding-bottom: 20px;
+  
 }
+
+.image-container-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("http://localhost/photographe-oc/wp-content/uploads/2023/04/hover.jpg") center/cover no-repeat; /* Image de fond de la div */
+}
+
+.image-block {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adapter l'image pour couvrir toute la div */
+  opacity: 1; /* Opacité initiale de l'image */
+  transition: opacity 1s ease; /* Ajouter une transition d'opacité de 0.5 seconde pour une animation fluide */
+}
+
+.overlay-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%);
+  opacity: 0; /* Initialiser l'opacité de l'overlay à 0 */
+  transition: opacity 0.5s ease; /* Ajouter une transition d'opacité de 0.5 seconde pour une animation fluide */
+}
+
+.overlay-block p {
+  color: #fff; /* Couleur du texte dans l'overlay */
+  padding: 20px; /* Marge intérieure du texte dans l'overlay */
+  text-align: center; /* Alignement du texte dans l'overlay */
+}
+
+.image-container-block:hover img{
+  opacity: 0; /* Faire disparaître l'image lors du survol de l'image */
+}
+
+.image-container-block:hover .overlay-block {
+  opacity: 1; /* Faire apparaître l'overlay lors du survol de l'image */
+}
+
+.bottom-left, .bottom-right {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.bottom-right a {
+  text-decoration: none;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.centered {
+  text-align: center;
+  position: absolute;
+}
+
+
+
